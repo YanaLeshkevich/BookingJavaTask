@@ -39,8 +39,6 @@ public class AirportTaxisPage extends PageBase {
     @FindBy(xpath = "//select[@id='passengers']")
     private WebElement passengersField;
 
-    private Select passengersDropDown = new Select(passengersField);
-
     public AirportTaxisPage(WebDriver driver) {
         super(driver);
     }
@@ -78,10 +76,12 @@ public class AirportTaxisPage extends PageBase {
     }
 
     public void chooseTheNumberOfThePassengers(Integer passengersNumber){
+        Assert.assertNotNull(passengersField, "Passengers field is empty");
+        Select passengersDropDown = new Select(passengersField);
         String pasengers = String.valueOf(passengersNumber);
         passengersDropDown.selectByValue(pasengers);
     }
-//lhl
+
     public void checkPassengersCountInTaxiForm(Integer passengersNumber){
         for (WebElement passengersStr : listOfPassengersOnTheTaxiForm) {
             Integer passengers = Integer.valueOf(passengersStr.getText());

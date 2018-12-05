@@ -1,13 +1,10 @@
 package pages;
 
 import base.PageBase;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
-import java.util.ArrayList;
 
 public class HotelPage extends PageBase {
 
@@ -31,6 +28,4 @@ public class HotelPage extends PageBase {
         System.out.println("Class: " + adultsTiile.getText());
         Assert.assertEquals(adultsTiile.getText(), adultsNumber, "Not correct number of adults!");
     }
-//    jggfjgh
-
 }

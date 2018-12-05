@@ -1,6 +1,7 @@
 package stepsDefinition;
 
 import base.BaseUtil;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -101,8 +102,8 @@ public class SearchAccommodationsSteps {
         searchResultPage.clickLowPriceOption1();
     }
 
-    @And("^Sort by (\\d+)hour Front Desk$")
-    public void sortByHourFrontDesk(int arg0) throws Throwable {
+    @And("^Sort by Front Desk$")
+    public void sortByHourFrontDesk() throws Throwable {
         System.out.println("Sort by 24hour Front Desk");
         SearchResultPage searchResultPage = new SearchResultPage(driver);
         searchResultPage.clickFrontDeskCheckBox();
@@ -134,7 +135,7 @@ public class SearchAccommodationsSteps {
         SearchResultPage searchResultPage = new SearchResultPage(driver);
         searchResultPage.clickStarsButton();
     }
-//nfdcv
+
     @Then("^Verify items order stars$")
     public void verifyItemsOrderStars() throws Throwable {
         System.out.println("Verify items order stars");

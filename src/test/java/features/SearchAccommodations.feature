@@ -8,7 +8,7 @@ Feature: Search Accommodations
     And Choose the dates for travel
     And Click Search button
     Then Verify that user on the country page
-#gfdgdf
+
   Scenario: Come to the page of a hotel and there're should be available rooms
     When User sort by free cancellation
     And Click on the first hotel
@@ -16,7 +16,7 @@ Feature: Search Accommodations
 
   Scenario: Compare title with number of hotels with actually numbers of hotels
     When User sort by price option one
-    And Sort by 24hour Front Desk
+    And Sort by Front Desk
     And Sort by availability hotel
     Then Verify number of hotels with actually numbers of hotels
 

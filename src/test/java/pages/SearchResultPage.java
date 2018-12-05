@@ -71,7 +71,7 @@ public class SearchResultPage extends PageBase {
         waitUntilElementDisappeared(hidingElement);
         theFirstHotelLink.click();
     }
-//bfbfdb
+
     public void clickLowPriceOption1(){
         priceOption1CheckBox.click();
     }

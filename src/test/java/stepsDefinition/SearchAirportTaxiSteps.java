@@ -15,9 +15,9 @@ public class SearchAirportTaxiSteps {
 
     private WebDriver driver;
 
-    private static final String cityAirport = "Florence";
-    private static final String dropoffLocation = "PLUS Florence Hostel & Hotel";
-    private static final Integer passengersNumber = 4;
+    private static final String CITY_AIRPORT = "Florence";
+    private static final String DROPOFF_LOCATION = "PLUS Florence Hostel & Hotel";
+    private static final Integer PASSENGERS_NUMBER = 4;
 
     public SearchAirportTaxiSteps(BaseUtil baseUtil) {
         this.driver = baseUtil.getDriver();
@@ -36,15 +36,15 @@ public class SearchAirportTaxiSteps {
         driver.switchTo().window(tabs2.get(1));
         System.out.println("Write Pick-up and Drop-off locations");
         AirportTaxisPage airportTaxisPage = new AirportTaxisPage(driver);
-        airportTaxisPage.writePickupLocation(cityAirport);
+        airportTaxisPage.writePickupLocation(CITY_AIRPORT);
         airportTaxisPage.chooseItemPickupFromTheList();
-        airportTaxisPage.writeDropoffLocationLabel(dropoffLocation);
+        airportTaxisPage.writeDropoffLocationLabel(DROPOFF_LOCATION);
         airportTaxisPage.chooseItemDropoffFromTheList();
         airportTaxisPage.clickChangeDate();
         airportTaxisPage.chooseDateForTaxi();
-        airportTaxisPage.chooseTheNumberOfThePassengers(passengersNumber);
+        airportTaxisPage.chooseTheNumberOfThePassengers(PASSENGERS_NUMBER);
     }
-//nvgbcv
+
     @And("^Click Search button for taxi$")
     public void clickSearchButtonForTaxi() throws Throwable {
         System.out.println("Click Search button for taxi");
@@ -56,6 +56,6 @@ public class SearchAirportTaxiSteps {
     public void verifyTheNumberOfPassengersOnTheTaxiForm() throws Throwable {
         System.out.println("Verify the number of passengers on the taxi form");
         AirportTaxisPage airportTaxisPage = new AirportTaxisPage(driver);
-        airportTaxisPage.checkPassengersCountInTaxiForm(passengersNumber);
+        airportTaxisPage.checkPassengersCountInTaxiForm(PASSENGERS_NUMBER);
     }
 }

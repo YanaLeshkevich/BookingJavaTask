@@ -4,7 +4,7 @@ Feature: Search Airport taxis
   Background: Set up the browser
     Given User is on home page
     And User change the language
-#ggfnhgf
+
   Scenario: Check number of passengers on the taxi form
     When User choose Airport taxi
     And Write Pick-up and Drop-off locations
