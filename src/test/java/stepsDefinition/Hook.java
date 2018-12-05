@@ -28,6 +28,6 @@ public class Hook {
     @After
     public void tearDownTest(){
         System.out.println("Run after Test!!!");
-//        baseUtil.getDriver().quit();
+        baseUtil.getDriver().quit();
     }
 }

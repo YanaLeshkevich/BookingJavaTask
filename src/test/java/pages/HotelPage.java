@@ -31,5 +31,6 @@ public class HotelPage extends PageBase {
         System.out.println("Class: " + adultsTiile.getText());
         Assert.assertEquals(adultsTiile.getText(), adultsNumber, "Not correct number of adults!");
     }
+//    jggfjgh
 
 }

@@ -81,7 +81,7 @@ public class AirportTaxisPage extends PageBase {
         String pasengers = String.valueOf(passengersNumber);
         passengersDropDown.selectByValue(pasengers);
     }
-
+//lhl
     public void checkPassengersCountInTaxiForm(Integer passengersNumber){
         for (WebElement passengersStr : listOfPassengersOnTheTaxiForm) {
             Integer passengers = Integer.valueOf(passengersStr.getText());

@@ -32,7 +32,7 @@ public class SearchAirportTaxiSteps {
 
     @And("^Write Pick-up and Drop-off locations$")
     public void writePickUpAndDropOffLocations() throws Throwable {
-        ArrayList<String> tabs2 = new ArrayList<>(driver.getWindowHandles());
+        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs2.get(1));
         System.out.println("Write Pick-up and Drop-off locations");
         AirportTaxisPage airportTaxisPage = new AirportTaxisPage(driver);
@@ -44,7 +44,7 @@ public class SearchAirportTaxiSteps {
         airportTaxisPage.chooseDateForTaxi();
         airportTaxisPage.chooseTheNumberOfThePassengers(passengersNumber);
     }
-
+//nvgbcv
     @And("^Click Search button for taxi$")
     public void clickSearchButtonForTaxi() throws Throwable {
         System.out.println("Click Search button for taxi");

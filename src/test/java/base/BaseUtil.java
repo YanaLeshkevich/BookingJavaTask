@@ -7,7 +7,7 @@ public class BaseUtil {
 
     public WebDriver getDriver() {
         return driver;
-    }
+    }//рр
 
     public void setDriver(WebDriver driver) {
         this.driver = driver;

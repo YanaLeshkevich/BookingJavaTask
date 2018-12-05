@@ -134,7 +134,7 @@ public class SearchAccommodationsSteps {
         SearchResultPage searchResultPage = new SearchResultPage(driver);
         searchResultPage.clickStarsButton();
     }
-
+//nfdcv
     @Then("^Verify items order stars$")
     public void verifyItemsOrderStars() throws Throwable {
         System.out.println("Verify items order stars");

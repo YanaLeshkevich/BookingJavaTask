@@ -67,11 +67,11 @@ public class SearchResultPage extends PageBase {
         availableFreeCancellationCheckBox.click();
     }
 
-    public void clickOnTheFirstHotelOnThePage() throws InterruptedException {
+    public void clickOnTheFirstHotelOnThePage() {
         waitUntilElementDisappeared(hidingElement);
         theFirstHotelLink.click();
     }
-
+//bfbfdb
     public void clickLowPriceOption1(){
         priceOption1CheckBox.click();
     }

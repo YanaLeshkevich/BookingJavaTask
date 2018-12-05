@@ -63,7 +63,7 @@ public class MainPage extends PageBase {
         firstCountryInTheList.click();
     }
 
-    public void clickOnCheckInField() throws InterruptedException {
+    public void clickOnCheckInField(){
         Actions action = new Actions(driver);
         action.clickAndHold(checkInField).build().perform();
     }
@@ -82,7 +82,7 @@ public class MainPage extends PageBase {
         waitUntilFoundElement(checkOutDate);
         checkOutDate.click();
     }
-
+//hbdfsbhfxd
     public void clickSearchButton(){
         searchButton.click();
     }
