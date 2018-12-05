@@ -65,7 +65,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>JavaTestTask</projectName>
+                            <projectName>JavaTestTask1.4</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                         </configuration>

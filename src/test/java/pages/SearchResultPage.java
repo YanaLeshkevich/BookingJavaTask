@@ -68,7 +68,7 @@ public class SearchResultPage extends PageBase {
     }
 
     public void clickOnTheFirstHotelOnThePage() {
-        waitUntilElementDisappeared(hidingElement);
+        waitUntilElementDisappearedLocatedBy(By.xpath("//div[@class='sr-usp-overlay__container']"));
         theFirstHotelLink.click();
     }
 
@@ -85,7 +85,7 @@ public class SearchResultPage extends PageBase {
     }
 
     public void getHotelsPriceListElements() {
-        waitUntilElementDisappeared(hidingElement);
+        waitUntilElementDisappearedLocatedBy(By.xpath("//div[@class='sr-usp-overlay__container']"));
 
         Integer previousPrice = 0;
         for (WebElement priceElement : priceList) {
@@ -94,7 +94,7 @@ public class SearchResultPage extends PageBase {
             String priceStr = text.split(" ")[1];
             Integer price = Integer.valueOf(priceStr);
 
-            Assert.assertTrue(price > previousPrice, "Price isn't in order!");
+            Assert.assertTrue(price >= previousPrice, "Price isn't in order!");
             previousPrice = price;
         }
     }
@@ -112,7 +112,7 @@ public class SearchResultPage extends PageBase {
     }
 
     public void getStarsListElements(){
-        waitUntilElementDisappeared(hidingElement);
+        waitUntilElementDisappearedLocatedBy(By.xpath("//div[@class='sr-usp-overlay__container']"));
 
         Integer hotelNumberOfStars = 5;
         for (WebElement starElement : starsList) {
@@ -139,7 +139,7 @@ public class SearchResultPage extends PageBase {
             String distanceStr = distanceElementText.split(" ")[0];
             Integer distance = Integer.valueOf(distanceStr);
 
-            Assert.assertTrue(distance > previousDistance, "Distance isn't in order!");
+            Assert.assertTrue(distance >= previousDistance, "Distance isn't in order!");
             previousDistance = distance;
         }
     }
